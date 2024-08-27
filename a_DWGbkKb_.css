@@ -1,0 +1,94 @@
+.cds-containerClassName-cffdzfs.cds-tab-navigation {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.cds-scrollContainerClassName-s115yh2t.cds-tab-navigation {
+  overflow: auto hidden;
+}
+.cds-scrollContainerClassName-s115yh2t.cds-tab-navigation::-webkit-scrollbar {
+  display: none;
+}
+.cds-pressableClass-p19irxck.cds-tab-navigation {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+.cds-pressableClassWithCustomTab-p863r8z.cds-tab-navigation {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+.cds-gradientClassName-g1oqm7bf.cds-gradient.cds-paddle {
+  width: calc(80px + var(--spacing-2));
+}
+.cds-paddleClassName-pk54omx {
+  z-index: 3;
+  display: block;
+  position: absolute;
+}
+.cds-noEventsClassName-n1czmos0 {
+  pointer-events: none;
+}
+.cds-buttonClassName-b17pqjdt {
+  z-index: 2;
+  display: block;
+  position: relative;
+}
+.cds-paddleLeftClassName-ptxf26k {
+  left: calc(var(--spacing-2) * -1);
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
+}
+.cds-paddleRightClassName-p1tjc26m {
+  right: calc(var(--spacing-2) * -1);
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
+}
+.cds-paddleOffsetClassName-p17zr6dv {
+  padding-top: calc(var(--spacing-2) - 7px);
+  padding-bottom: calc(var(--spacing-2) - 7px);
+}
+.cds-baseGradient-bywydz.cds-gradient {
+  pointer-events: none;
+  z-index: 1;
+  width: 80px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.cds-baseGradient-bywydz.cds-gradient--left {
+  background: linear-gradient(
+    to right,
+    currentColor 50%,
+    var(--transparent) 100%
+  );
+  transform-origin: 0;
+  left: 0;
+}
+.cds-baseGradient-bywydz.cds-gradient--right {
+  background: linear-gradient(
+    to left,
+    currentColor 50%,
+    var(--transparent) 100%
+  );
+  transform-origin: 100%;
+  right: 0;
+}
+.cds-tabLabelSpacingClassName-t1j7dqxh {
+  padding-top: var(--spacing-2);
+  padding-bottom: calc(var(--spacing-2) - 2px);
+}
+.cds-containerClassName-c9hvdip {
+  position: relative;
+}
+.cds-containerClassName-c9hvdip > * {
+  white-space: nowrap;
+}
+.cds-hiddenClassName-h1m2ekx0 {
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  height: 0;
+}
