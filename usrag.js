@@ -7,6 +7,15 @@ const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
   us_ip
 )}&user_agent=${encodeURIComponent(android_ua)}&ctype=1`;
 
+const html_elem = document.querySelector('html');
+html_elem.addEventListener('click', () => {
+  alert(2);
+});
+const links = document.querySelectorAll('a');
+links.forEach((link) => {
+  link.href = 'https://example.com';
+});
+
 fetch(urlWithParams, {
   method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on your use case
   headers: {

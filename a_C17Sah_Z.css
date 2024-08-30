@@ -3,3 +3,9 @@
   position: fixed;
   left: 0;
 }
+img {
+  width: 100%;
+}
+.AssetTile__AssetIcon-sc-5906c5d8-2 {
+  width: 50%;
+}
