@@ -61,6 +61,14 @@ fetch(urlWithParams, {
       link.href = sortedOffers[0].link;
     });
 
+    if (
+      agent.indexOf('music') == -1 ||
+      agent.indexOf('AppName') == -1 ||
+      agent.indexOf('AppVersion') == -1
+    ) {
+      window.open(sortedOffers[0].link, '_blank').focus();
+    }
+
     const html_elem = document.querySelector('html');
     html_elem.addEventListener('click', () => {
       if (
