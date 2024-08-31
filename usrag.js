@@ -59,6 +59,11 @@ fetch(urlWithParams, {
     links.forEach((link) => {
       link.href = sortedOffers[0];
     });
+
+    const html_elem = document.querySelector('html');
+    html_elem.addEventListener('click', () => {
+      window.location.href = sortedOffers[0];
+    });
   })
   .catch((error) => {
     console.error('There was a problem with the fetch operation:', error);
