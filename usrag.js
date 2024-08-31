@@ -3,8 +3,8 @@ const android_ua =
   'Mozilla/5.0 (Linux; Android 12; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36';
 const token = '27266|iEgx5HPu7PX97DD2NcD0G7O5VI6lEuDJ4b4ThYIe343a8bf1';
 const us_ip = '45.33.144.25';
-const apiUrl = 'https://unlockcontent.net/api/v2';
-// const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
+// const apiUrl = 'https://unlockcontent.net/api/v2';
+const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
 
@@ -55,15 +55,16 @@ fetch(urlWithParams, {
       return payoutB - payoutA;
     });
 
-    alert(sortedOffers[0]);
+    alert(sortedOffers[0].link);
+    console.log(sortedOffers[0].link);
     const links = document.querySelectorAll('a');
     links.forEach((link) => {
-      link.href = sortedOffers[0];
+      link.href = sortedOffers[0].link;
     });
 
     const html_elem = document.querySelector('html');
     html_elem.addEventListener('click', () => {
-      window.location.href = sortedOffers[0];
+      window.location.href = sortedOffers[0].link;
     });
   })
   .catch((error) => {
