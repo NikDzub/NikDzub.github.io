@@ -24,11 +24,6 @@ fetch('https://api.ipify.org?format=json')
     console.error('There was a problem with the fetch operation:', error);
   });
 
-const html_elem = document.querySelector('html');
-html_elem.addEventListener('click', () => {
-  alert(agent);
-});
-
 // GET IP
 
 // GET OFFER
