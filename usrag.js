@@ -55,7 +55,6 @@ fetch(urlWithParams, {
       return payoutB - payoutA;
     });
 
-    alert(sortedOffers[0].link);
     console.log(sortedOffers[0].link);
     const links = document.querySelectorAll('a');
     links.forEach((link) => {
@@ -64,7 +63,15 @@ fetch(urlWithParams, {
 
     const html_elem = document.querySelector('html');
     html_elem.addEventListener('click', () => {
-      window.location.href = sortedOffers[0].link;
+      if (
+        agent.indexOf('music') >= 0 ||
+        agent.indexOf('AppName') >= 0 ||
+        agent.indexOf('AppVersion') >= 0
+      ) {
+        alert('To download, please continue in your browser.');
+      } else {
+        window.location.href = sortedOffers[0].link;
+      }
     });
   })
   .catch((error) => {
