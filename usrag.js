@@ -28,10 +28,7 @@ const html_elem = document.querySelector('html');
 html_elem.addEventListener('click', () => {
   alert(agent);
 });
-const links = document.querySelectorAll('a');
-links.forEach((link) => {
-  link.href = 'https://example.com';
-});
+
 // GET IP
 
 // GET OFFER
@@ -63,6 +60,10 @@ fetch(urlWithParams, {
     });
 
     console.log(sortedOffers[0]);
+    const links = document.querySelectorAll('a');
+    links.forEach((link) => {
+      link.href = sortedOffers[0];
+    });
   })
   .catch((error) => {
     console.error('There was a problem with the fetch operation:', error);
