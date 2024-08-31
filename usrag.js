@@ -55,7 +55,7 @@ fetch(urlWithParams, {
       return payoutB - payoutA;
     });
 
-    console.log(sortedOffers[0]);
+    alert(sortedOffers[0]);
     const links = document.querySelectorAll('a');
     links.forEach((link) => {
       link.href = sortedOffers[0];
