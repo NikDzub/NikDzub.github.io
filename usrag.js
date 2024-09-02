@@ -31,7 +31,6 @@ fetch('https://api.ipify.org?format=json')
     const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
       us_ip
     )}&user_agent=${encodeURIComponent(agent)}&ctype=1`;
-    // alert(urlWithParams);
 
     fetch(urlWithParams, {
       method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on your use case
@@ -43,6 +42,7 @@ fetch('https://api.ipify.org?format=json')
       .then((response) => {
         if (!response.ok) {
           alert('bad response');
+          alert(response.statusText);
           throw new Error('Network response was not ok ' + response.statusText);
         }
         return response.json(); // or response.text() if the response is plain text
