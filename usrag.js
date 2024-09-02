@@ -29,7 +29,7 @@ fetch('https://api.ipify.org?format=json')
 
     // GET OFFER
     const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
-      ip
+      us_ip
     )}&user_agent=${encodeURIComponent(agent)}&ctype=1`;
     // alert(urlWithParams);
 
@@ -42,12 +42,13 @@ fetch('https://api.ipify.org?format=json')
     })
       .then((response) => {
         if (!response.ok) {
-          alert(response.statusText);
+          alert('bad response');
           throw new Error('Network response was not ok ' + response.statusText);
         }
         return response.json(); // or response.text() if the response is plain text
       })
       .then((data) => {
+        console.log(data);
         // alert(data.offers[0].name);
         const filteredOffers = data.offers.filter((offer) =>
           offer.name.toLowerCase().includes('coin')
