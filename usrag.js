@@ -3,8 +3,8 @@ const android_ua =
   'Mozilla/5.0 (Linux; Android 12; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36';
 const token = '27266|iEgx5HPu7PX97DD2NcD0G7O5VI6lEuDJ4b4ThYIe343a8bf1';
 const us_ip = '45.33.144.25';
-// const apiUrl = 'https://unlockcontent.net/api/v2';
-const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
+const apiUrl = 'https://unlockcontent.net/api/v2';
+// const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
 
@@ -59,6 +59,7 @@ fetch('https://api.ipify.org?format=json')
           return payoutB - payoutA;
         });
 
+        alert(sortedOffers.length);
         alert(sortedOffers[0].name);
         info.textContent = sortedOffers.length;
         info.textContent = sortedOffers[0].name;
