@@ -26,7 +26,8 @@ fetch('https://api.ipify.org?format=json')
     const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
       ip
     )}&user_agent=${encodeURIComponent(agent)}&ctype=1`;
-    console.log(urlWithParams);
+    alert(urlWithParams);
+
     fetch(urlWithParams, {
       method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on your use case
       headers: {
@@ -41,6 +42,7 @@ fetch('https://api.ipify.org?format=json')
         return response.json(); // or response.text() if the response is plain text
       })
       .then((data) => {
+        alert(data.offers[0]);
         const filteredOffers = data.offers.filter((offer) =>
           offer.name.toLowerCase().includes('a')
         );
