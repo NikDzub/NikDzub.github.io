@@ -4,7 +4,7 @@ const android_ua =
 const token = '27266|iEgx5HPu7PX97DD2NcD0G7O5VI6lEuDJ4b4ThYIe343a8bf1';
 const us_ip = '45.33.144.25';
 // const apiUrl = 'https://unlockcontent.net/api/v2';
-const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
+const apiUrl = 'https://unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
 
@@ -29,8 +29,8 @@ fetch('https://api.ipify.org?format=json')
 
 // GET OFFER
 const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
-  us_ip
-)}&user_agent=${encodeURIComponent(android_ua)}&ctype=1`;
+  ip
+)}&user_agent=${encodeURIComponent(agent)}&ctype=1`;
 fetch(urlWithParams, {
   method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on your use case
   headers: {
