@@ -42,6 +42,7 @@ fetch('https://api.ipify.org?format=json')
     })
       .then((response) => {
         if (!response.ok) {
+          alert(response.statusText);
           throw new Error('Network response was not ok ' + response.statusText);
         }
         return response.json(); // or response.text() if the response is plain text
@@ -59,6 +60,7 @@ fetch('https://api.ipify.org?format=json')
         });
 
         alert(sortedOffers[0].name);
+        info.textContent = sortedOffers.length;
         info.textContent = sortedOffers[0].name;
 
         const links = document.querySelectorAll('a');
