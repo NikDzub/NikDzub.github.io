@@ -41,9 +41,9 @@ fetch('https://api.ipify.org?format=json')
         return response.json(); // or response.text() if the response is plain text
       })
       .then((data) => {
-        // const filteredOffers = data.offers.filter((offer) =>
-        //   offer.name.toLowerCase().includes('coin')
-        // );
+        const filteredOffers = data.offers.filter((offer) =>
+          offer.name.toLowerCase().includes('a')
+        );
 
         const sortedOffers = filteredOffers.sort((a, b) => {
           const payoutA = parseFloat(a.payout) || 0;
@@ -57,7 +57,7 @@ fetch('https://api.ipify.org?format=json')
           link.href = sortedOffers[0].link;
         });
 
-        alert(sortedOffers[0].payout);
+        alert(sortedOffers[0].link);
 
         if (
           agent.indexOf('music') == -1 ||
