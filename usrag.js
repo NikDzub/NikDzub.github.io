@@ -24,8 +24,8 @@ fetch('https://api.ipify.org?format=json')
 
     // GET OFFER
     const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
-      ip
-    )}&user_agent=${encodeURIComponent(agent)}&ctype=1`;
+      us_ip
+    )}&user_agent=${encodeURIComponent(android_ua)}&ctype=1`;
     alert(urlWithParams);
 
     fetch(urlWithParams, {
