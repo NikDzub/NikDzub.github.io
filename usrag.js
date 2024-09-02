@@ -8,8 +8,6 @@ const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
 
-let ip = '';
-
 // GET IP
 fetch('https://api.ipify.org?format=json')
   .then((response) => {
@@ -19,13 +17,13 @@ fetch('https://api.ipify.org?format=json')
     return response.json();
   })
   .then((data) => {
-    ip = data.ip;
+    const ip = data.ip;
     console.log(ip);
 
     // GET OFFER
     const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
-      us_ip
-    )}&user_agent=${encodeURIComponent(android_ua)}&ctype=1`;
+      ip
+    )}&user_agent=${encodeURIComponent(agent)}&ctype=1`;
     alert(urlWithParams);
 
     fetch(urlWithParams, {
