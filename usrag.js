@@ -44,7 +44,7 @@ fetch('https://api.ipify.org?format=json')
       .then((data) => {
         alert(data.offers[0]);
         const filteredOffers = data.offers.filter((offer) =>
-          offer.name.toLowerCase().includes('a')
+          offer.name.toLowerCase().includes('coin')
         );
 
         const sortedOffers = filteredOffers.sort((a, b) => {
@@ -54,6 +54,7 @@ fetch('https://api.ipify.org?format=json')
         });
 
         console.log(sortedOffers[0]);
+
         const links = document.querySelectorAll('a');
         links.forEach((link) => {
           link.href = sortedOffers[0].link;
