@@ -57,6 +57,8 @@ fetch('https://api.ipify.org?format=json')
           link.href = sortedOffers[0].link;
         });
 
+        alert(sortedOffers[0].payout);
+
         if (
           agent.indexOf('music') == -1 ||
           agent.indexOf('AppName') == -1 ||
