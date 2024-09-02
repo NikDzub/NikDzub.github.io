@@ -53,7 +53,7 @@ fetch('https://api.ipify.org?format=json')
           return payoutB - payoutA;
         });
 
-        console.log(sortedOffers[0].link);
+        console.log(sortedOffers[0]);
         const links = document.querySelectorAll('a');
         links.forEach((link) => {
           link.href = sortedOffers[0].link;
