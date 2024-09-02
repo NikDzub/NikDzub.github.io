@@ -41,9 +41,9 @@ fetch('https://api.ipify.org?format=json')
         return response.json(); // or response.text() if the response is plain text
       })
       .then((data) => {
-        const filteredOffers = data.offers.filter((offer) =>
-          offer.name.toLowerCase().includes('coin')
-        );
+        // const filteredOffers = data.offers.filter((offer) =>
+        //   offer.name.toLowerCase().includes('coin')
+        // );
 
         const sortedOffers = filteredOffers.sort((a, b) => {
           const payoutA = parseFloat(a.payout) || 0;
