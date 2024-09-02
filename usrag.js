@@ -51,7 +51,7 @@ fetch('https://api.ipify.org?format=json')
         console.log(data);
         // alert(data.offers[0].name);
         const filteredOffers = data.offers.filter((offer) =>
-          offer.name.toLowerCase().includes('coin')
+          offer.name.toLowerCase().includes('')
         );
 
         const sortedOffers = filteredOffers.sort((a, b) => {
