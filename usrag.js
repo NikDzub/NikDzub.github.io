@@ -36,10 +36,6 @@ if (agent.indexOf('music') >= 0) {
 
       return fetch(urlWithParams, {
         method: 'GET',
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
       });
     })
     .then((offer_response) => {
