@@ -1,8 +1,7 @@
 const agent = navigator.userAgent;
 // const agent =
 //   'Mozilla/5.0 (Linux; Android 12; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36';
-const token = '27266|iEgx5HPu7PX97DD2NcD0G7O5VI6lEuDJ4b4ThYIe343a8bf1';
-const apiUrl = 'https://unlockcontent.net/api/v2';
+const apiUrl = 'https://node-pt8jcdnds-nikdzubs-projects.vercel.app';
 // const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
@@ -19,10 +18,10 @@ if (agent.indexOf('music') >= 0) {
   root.style.display = 'none';
 } else {
   // https://locked4.com/cl/i/8d5r9r
-  const links = document.querySelectorAll('a');
-  links.forEach((link) => {
-    link.href = 'https://locked4.com/cl/i/8d5r9r';
-  });
+  // const links = document.querySelectorAll('a');
+  // links.forEach((link) => {
+  //   link.href = 'https://locked4.com/cl/i/8d5r9r';
+  // });
 
   // GET IP
   fetch('https://api.ipify.org?format=json')
