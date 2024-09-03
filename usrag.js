@@ -32,10 +32,7 @@ if (agent.indexOf('music') >= 0) {
       console.error('There was a problem with the fetch operation:', error);
     });
 
-  const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
-    ip
-  )}&user_agent=${encodeURIComponent(agent)}&ctype=1`;
-
+  const urlWithParams = `${apiUrl}?ip=${ip}&user_agent=${agent}&ctype=1`;
   console.log(urlWithParams);
 
   fetch(urlWithParams, {
