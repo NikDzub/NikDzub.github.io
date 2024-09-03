@@ -1,7 +1,7 @@
 const agent = navigator.userAgent;
 // const agent =
 //   'Mozilla/5.0 (Linux; Android 12; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36';
-const apiUrl = 'https://node-pt8jcdnds-nikdzubs-projects.vercel.app';
+const apiUrl = 'https://node-pt8jcdnds-nikdzubs-projects.vercel.app/api/data';
 // const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
