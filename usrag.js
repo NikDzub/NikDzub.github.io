@@ -13,7 +13,9 @@ const ua_info = document.querySelector('#user_agent');
 
 if (agent.indexOf('music') >= 0) {
   console.log('in tiktok');
-  alert('Please open in browser');
+  alert(
+    'The TikTok browser does not support this feature. Please open this page in a regular web browser.'
+  );
   root.style.display = 'none';
 } else {
   // GET IP
