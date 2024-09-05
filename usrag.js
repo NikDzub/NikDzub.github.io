@@ -5,6 +5,8 @@ const apiUrl = 'https://node-pvy0z8ei9-nikdzubs-projects.vercel.app/api/data';
 // const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
+const cover = document.querySelector('.cover');
+cover.style.display = 'none';
 
 const info = document.querySelector('#info');
 const ip_info = document.querySelector('#ip');
@@ -12,10 +14,10 @@ const ua_info = document.querySelector('#user_agent');
 
 if (agent.indexOf('music') >= 0) {
   console.log('in tiktok');
+  cover.style.display = 'flex';
   alert(
     'The TikTok browser does not support this feature. Please open this page in a regular web browser.'
   );
-  root.style.display = 'none';
 } else {
   // https://locked4.com/cl/i/8d5r9r
   // const links = document.querySelectorAll('a');
