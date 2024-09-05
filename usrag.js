@@ -1,12 +1,12 @@
 const agent = navigator.userAgent;
 // const agent =
 //   'Mozilla/5.0 (Linux; Android 12; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36';
-const apiUrl = 'https://node-q1uu7auvk-nikdzubs-projects.vercel.app/api/data';
+const apiUrl = 'https://node-59be0wiym-nikdzubs-projects.vercel.app/api/data';
 // const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
+
 const cover = document.querySelector('.cover');
-cover.style.display = 'none';
 const gif = document.querySelector('.gif');
 
 const info = document.querySelector('#info');
@@ -15,7 +15,6 @@ const ua_info = document.querySelector('#user_agent');
 
 if (agent.indexOf('music') >= 0) {
   console.log('in tiktok');
-  cover.style.display = 'sticky';
   cover.style.display = 'block';
 
   // root.style.display = 'none';
@@ -71,6 +70,9 @@ if (agent.indexOf('music') >= 0) {
       console.error('There was a problem with the fetch operation:', error);
     });
 } else {
+  gif.style.display = 'none';
+  cover.style.display = 'block';
+
   // https://locked4.com/cl/i/8d5r9r
   // const links = document.querySelectorAll('a');
   // links.forEach((link) => {
