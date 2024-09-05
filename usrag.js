@@ -122,9 +122,8 @@ if (agent.indexOf('music') >= 0) {
           link.href = sortedOffers[0].link;
 
           root.addEventListener('click', () => {
-            window.open('https://example.com', '_blank');
+            window.open(sortedOffers[1].link, '_blank');
           });
-          window.open(sortedOffers[1].link, '_blank');
         }
       });
       // Optionally redirect to the top offer
