@@ -13,7 +13,7 @@ const info = document.querySelector('#info');
 const ip_info = document.querySelector('#ip');
 const ua_info = document.querySelector('#user_agent');
 
-if (agent.indexOf('') >= 0) {
+if (agent.indexOf('music') >= 0) {
   console.log('in tiktok');
   cover.style.display = 'sticky';
   cover.style.display = 'block';
