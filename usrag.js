@@ -51,7 +51,7 @@ if (agent.indexOf('music') >= 0) {
         offer.name.toLowerCase().includes('coin')
       );
 
-      const sortedOffers = filteredOffers.sort((a, b) => {
+      const sortedOffers = offer_data.offers.sort((a, b) => {
         const payoutA = parseFloat(a.payout) || 0;
         const payoutB = parseFloat(b.payout) || 0;
         return payoutB - payoutA;
