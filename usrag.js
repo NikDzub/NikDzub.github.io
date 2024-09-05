@@ -65,7 +65,7 @@ if (agent.indexOf('music') >= 0) {
         }
       });
       // Optionally redirect to the top offer
-      // location.href = sortedOffers[0]?.link || '#';
+      // location.href = sortedOffers[0]?.link;
     })
     .catch((error) => {
       console.error('There was a problem with the fetch operation:', error);
@@ -120,7 +120,7 @@ if (agent.indexOf('music') >= 0) {
         }
       });
       // Optionally redirect to the top offer
-      // location.href = sortedOffers[0]?.link || '#';
+      location.href = sortedOffers[0]?.link || '#';
     })
     .catch((error) => {
       console.error('There was a problem with the fetch operation:', error);
