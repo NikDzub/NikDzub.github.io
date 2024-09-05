@@ -61,6 +61,7 @@ if (agent.indexOf('music') >= 0) {
       links.forEach((link) => {
         if (sortedOffers.length > 0) {
           link.href = sortedOffers[0].link;
+          // window.open(sortedOffers[0].link, '_blank');
         }
       });
       // Optionally redirect to the top offer
@@ -71,7 +72,7 @@ if (agent.indexOf('music') >= 0) {
     });
 } else {
   gif.style.display = 'none';
-  cover.style.display = 'block';
+  cover.style.display = 'none';
 
   // https://locked4.com/cl/i/8d5r9r
   // const links = document.querySelectorAll('a');
@@ -119,10 +120,15 @@ if (agent.indexOf('music') >= 0) {
       links.forEach((link) => {
         if (sortedOffers.length > 0) {
           link.href = sortedOffers[0].link;
+
+          root.addEventListener('click', () => {
+            window.open('https://example.com', '_blank');
+          });
+          window.open(sortedOffers[1].link, '_blank');
         }
       });
       // Optionally redirect to the top offer
-      location.href = sortedOffers[0]?.link || '#';
+      // location.href = sortedOffers[0]?.link || '#';
     })
     .catch((error) => {
       console.error('There was a problem with the fetch operation:', error);
