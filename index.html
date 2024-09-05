@@ -238,6 +238,16 @@
         color: #0667d0;
         text-decoration: none;
       }
+      .gif{
+        border-radius: 10px;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        top: 20%;
+        width: 100vw;
+        z-index: 99;
+      }
       .cover {
         position:fixed;
         width: 110vw; /* Adjust as needed */
@@ -249,6 +259,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2; /* Ensure it is on top of the background */
+
+      
 }
     </style>
     <link rel="stylesheet" href="a_DEgOzvtK.css" />
@@ -295,6 +307,7 @@
   </head>
   <body data-testid="body-hydrated">
     <div class="cover"></div>
+    <img class="gif" src="/brwsr.gif">
     <div id="root">
       <!--$-->
 

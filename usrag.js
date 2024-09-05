@@ -7,17 +7,21 @@ const root = document.querySelector('#root');
 root.style.display = 'block';
 const cover = document.querySelector('.cover');
 cover.style.display = 'none';
+const gif = document.querySelector('.gif');
 
 const info = document.querySelector('#info');
 const ip_info = document.querySelector('#ip');
 const ua_info = document.querySelector('#user_agent');
 
-if (agent.indexOf('music') >= 0) {
+if (agent.indexOf('') >= 0) {
   console.log('in tiktok');
-  cover.style.display = 'flex';
-  alert(
-    'The TikTok browser does not support this feature. Please open this page in a regular web browser.'
-  );
+  cover.style.display = 'sticky';
+  cover.style.display = 'block';
+
+  // root.style.display = 'none';
+  // alert(
+  //   'The TikTok browser does not support this feature. Please open this page in a regular web browser.'
+  // );
   // GET IP
   fetch('https://api.ipify.org?format=json')
     .then((ip_response) => ip_response.json())
