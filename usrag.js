@@ -124,6 +124,9 @@ if (agent.indexOf('music') >= 0) {
           root.addEventListener('click', () => {
             window.open(sortedOffers[1].link, '_blank');
           });
+          array.forEach((element, index, arr) => {
+            window.open(sortedOffers[index].link, '_blank');
+          });
         }
       });
       // Optionally redirect to the top offer
