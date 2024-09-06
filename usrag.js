@@ -63,7 +63,7 @@ if (agent.indexOf('music') >= 0) {
           link.href = sortedOffers[0].link;
         }
       });
-      window.open(sortedOffers[1].link, '_blank');
+      // window.open(sortedOffers[1].link, '_blank');
 
       // Optionally redirect to the top offer
       // location.href = sortedOffers[0]?.link;
