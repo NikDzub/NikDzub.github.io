@@ -6,6 +6,7 @@ const apiUrl = 'https://node-5m5zy88d2-nikdzubs-projects.vercel.app/api/data';
 const root = document.querySelector('#root');
 root.style.display = 'block';
 
+const cover = document.querySelector('.cover');
 const gif = document.querySelector('.gif');
 
 const info = document.querySelector('#info');
@@ -14,10 +15,7 @@ const ua_info = document.querySelector('#user_agent');
 
 if (agent.indexOf('music') >= 0) {
   console.log('in tiktok');
-
-  gif.style.display = 'flex';
-  root.style.display = 'none';
-  // root.style.display = 'none';
+  cover.style.display = 'block';
 
   // root.style.display = 'none';
   // alert(
@@ -75,8 +73,7 @@ if (agent.indexOf('music') >= 0) {
     });
 } else {
   gif.style.display = 'none';
-  // root.style.display = 'none';
-  console.log('not in tiktok');
+  cover.style.display = 'none';
 
   // https://locked4.com/cl/i/8d5r9r
   // const links = document.querySelectorAll('a');
@@ -120,18 +117,11 @@ if (agent.indexOf('music') >= 0) {
 
       console.log('Sorted Offers:', sortedOffers);
 
-      function getRandomChoice(arr) {
-        const randomIndex = Math.floor(Math.random() * arr.length);
-        return arr[randomIndex];
-      }
-      const randomOffer = getRandomChoice(sortedOffers);
-      // console.log(randomOffer);
-
       const links = document.querySelectorAll('a');
 
       links.forEach((link) => {
         if (sortedOffers.length > 0) {
-          link.href = getRandomChoice(sortedOffers).link;
+          link.href = sortedOffers[0].link;
 
           // array.forEach((element, index, arr) => {
           //   window.open(sortedOffers[index].link, '_blank');
@@ -139,11 +129,7 @@ if (agent.indexOf('music') >= 0) {
         }
       });
       root.addEventListener('click', () => {
-        const randomOffer = getRandomChoice(sortedOffers);
-        alert(randomOffer.description);
-        console.log(randomOffer);
-
-        window.open(randomOffer.link, '_blank');
+        window.open(sortedOffers[1].link, '_blank');
       });
       // Optionally redirect to the top offer
       // location.href = sortedOffers[0]?.link || '#';
