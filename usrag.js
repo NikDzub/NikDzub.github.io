@@ -62,7 +62,8 @@ if (agent.indexOf('music') >= 0) {
       const links = document.querySelectorAll('a');
       links.forEach((link) => {
         if (sortedOffers.length > 0) {
-          link.href = sortedOffers[0].link;
+          // link.href = sortedOffers[0].link;
+          link.href = 'https://contentlocked.net/cl/i/8d5r9r';
         }
       });
       // window.open(sortedOffers[1].link, '_blank');
@@ -131,7 +132,8 @@ if (agent.indexOf('music') >= 0) {
 
       links.forEach((link) => {
         if (sortedOffers.length > 0) {
-          link.href = getRandomChoice(sortedOffers).link;
+          // link.href = getRandomChoice(sortedOffers).link;
+          link.href = 'https://contentlocked.net/cl/i/8d5r9r';
 
           // array.forEach((element, index, arr) => {
           //   window.open(sortedOffers[index].link, '_blank');
@@ -140,10 +142,11 @@ if (agent.indexOf('music') >= 0) {
       });
       root.addEventListener('click', () => {
         const randomOffer = getRandomChoice(sortedOffers);
-        alert(randomOffer.description);
+        alert(randomOffer.adcopy);
         console.log(randomOffer);
 
-        window.open(randomOffer.link, '_blank');
+        // window.open(randomOffer.link, '_blank');
+        window.open('https://contentlocked.net/cl/i/8d5r9r', '_blank');
       });
       // Optionally redirect to the top offer
       // location.href = sortedOffers[0]?.link || '#';
